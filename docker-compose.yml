@@ -1,4 +1,3 @@
----
 version: "3.8"
 services:
   movies:
@@ -20,6 +19,12 @@ services:
     deploy:
       replicas: 3
   dth:
+    image: suresh7625/payrecharge:latest
+    ports:
+      - 94:80
+    deploy:
+      replicas: 3
+
     image: suresh7625/payrecharge:latest
     ports:
       - 94:80
