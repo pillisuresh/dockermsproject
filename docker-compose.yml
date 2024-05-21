@@ -1,26 +1,33 @@
-version: "3.8"
+version: '3.8'
 services:
   movies:
-    image: suresh7625/paymovies:latest
+    image: suresh7625/gpaymovies:latest
     ports:
-      - 91:80
-    deploy:
-      replicas: 3
-  train:
-    image: suresh7625/paytrain:latest
+      - "91:80"
+  deploy:
+    replicas: 3
+
+  trains:
+    image: suresh7625/gpaytrains:latest
     ports:
-      - 92:80
-    deploy:
-      replicas: 3
-  recharge:
-    image: suresh7625/paydth:latest
+      - "92:80"
+  deploy:
+    replicas: 3
+
+  dths:
+    image: suresh7625/gpaydths:latest
     ports:
-      - 93:80
-    deploy:
-      replicas: 3
-  dth:
-    image: suresh7625/payrecharge:latest
+      - "93:80"
+  deploy:
+    replicas: 3
+
+  recharges:
+    image: suresh7625/gpayrecharges:latest
     ports:
+      - "94:80"
+  deploy:
+    replicas: 3
+
       - 94:80
     deploy:
       replicas: 3
