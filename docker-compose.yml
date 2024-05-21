@@ -31,9 +31,3 @@ services:
       - 94:80
     deploy:
       replicas: 3
-
-    image: suresh7625/payrecharge:latest
-    ports:
-      - 94:80
-    deploy:
-      replicas: 3
